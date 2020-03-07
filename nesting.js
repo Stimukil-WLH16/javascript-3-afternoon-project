@@ -161,6 +161,25 @@ var myCar = {
 
 //Code Here
 
+function recordCleaner(){
+  for(let key in myCar){
+    if(myCar.accidents[i].atFaultForAccident === true){
+      myCar.accidents[i].atFaultForAccident = false
+    }
+  }
+  return myCar
+}
+
+// function recordCleaner(myCar){
+//   for(let i = 0; i < myCar.accidents.length; i++){
+//     if(myCar.accidents[i].atFaultForAccident === true){
+//       return myCar.accidents[i].atFaultForAccident = false
+//     }
+//   }
+//   return myCar
+// }
+
+
 
 
 ////////// PROBLEM 5 //////////
@@ -170,7 +189,7 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 // Do not edit the code above.
 
 /*
-  Above is an array of arrays. Use two for loops.
+  Above is an array of arrays. Use two for loops. (.forEach()??)
     1. Write a function called 'looper'. 
     2. 'looper' should loop over the arrays.
     3.  If the number is odd, replace it with 'odd'.
@@ -180,4 +199,10 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 //Code Here
 
-
+function looper(){
+  for(let i = 0; i < numsArr[i].length; i++){
+    for(let j = 0; j < numsArr[j].length; j++){
+      console.log(i, j)
+    }
+  }
+}
