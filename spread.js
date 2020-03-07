@@ -18,7 +18,7 @@ let product = {
 }
 
 // code here
-
+const productCopy = {...product}
 
 
 
@@ -29,13 +29,16 @@ let product = {
 let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
 // code here
+const colorsCopy = [...colors]
 
 
 
 
 ////////// PROBLEM 3 //////////
 
-/* Here we have an array with 3 numbers, and a function that takes in 3 numbers as arguments.  Invoke addNums, and use the spread operator to pass in the numbers from the numbers array; and store the value to a variable named result */
+/* Here we have an array with 3 numbers, and a function that takes in 3 numbers as arguments.  
+Invoke addNums, and use the spread operator to pass in the numbers from the numbers array; 
+and store the value to a variable named result */
 
 let numbers = [4, 6, 10];
 
@@ -44,13 +47,23 @@ function addNums(num1, num2, num3) {
 }
 
 // code here
+// let result = [...numbers]
+// addNums(result)
+
+// console.log(result)
+
+let result = addNums(...numbers)
+
 
 
 ////////// PROBLEM 4 //////////
 
-/* Using the spread operator, concatentate the two arrays below and save it to a variable named "combinedArrays" */
+/* Using the spread operator, concatentate the two arrays below and save it to a 
+variable named "combinedArrays" */
 
 let arr1 = ['dog', 'chameleon', 'monkey'];
 let arr2 = ['bear', 'tiger', 'liger'];
 
 // code here
+
+const combinedArrays = [...arr1, ...arr2]
